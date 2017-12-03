@@ -1,0 +1,12 @@
+extends ./../layout
+
+block stylesheets
+	link(rel="stylesheet", href="")
+
+block content
+	h1 Welcome
+	input#message_content(type="text")
+	button#client_send_message Send
+block scripts
+	script(src='/socket.io/socket.io.js')
+	script(src='/javascripts/socket-client.js')

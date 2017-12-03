@@ -1,0 +1,34 @@
+extends ./layout/main
+block stylesheets
+	link(rel='stylesheet', href='/libs/cropperjs/dist/cropper.min.css')
+	link(rel='stylesheet', href='/stylesheets/cropper-editor.css')
+block content
+	h1= title
+	p Welcome to #{title} abc
+	input#test-crop(type='file')
+block scripts
+	script(src='/libs/cropperjs/dist/cropper.min.js')
+	script(src='/javascripts/cropper-editor.js')
+	script(type='text/javascript').
+		var cropperEditor = new CropperEditor({
+			selector : 'test-crop',
+			uploadDir: '/media/images/slider/',
+			prefixFileName: 'test',
+			thumbWidth: 315,
+			thumbHeight: 210,
+			toolbars: {
+				crop : true,
+				zoomIn: true,
+				zoomOut: true,
+				rotateLeft: true,
+				rotateRight: true,
+				submitCrop: true
+			},
+			clientOptions: {
+				viewMode: 1,
+				cropBoxResizable: false,
+				minContainerWidth: 600,
+				minContainerHeight: 400,
+			}
+		})
+		cropperEditor.init();

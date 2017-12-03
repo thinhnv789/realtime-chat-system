@@ -1,0 +1,9 @@
+#ignore node_modules
+/node_modules
+
+#ignore media
+/media
+
+#ignore config
+/src/config/dbConfig.json
+/src/config/system.json

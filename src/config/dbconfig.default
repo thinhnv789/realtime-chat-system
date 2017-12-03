@@ -1,0 +1,5 @@
+{
+  "mongodb": {
+      "address": "mongodb://thinhnv:123456@ds157380.mlab.com:57380/nodecms"
+  }
+}
