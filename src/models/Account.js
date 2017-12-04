@@ -8,8 +8,8 @@ const mongoose = require('mongoose');
  */
 const accountSchema = new mongoose.Schema({
     userName: { type: String, unique: true },
-    phoneNumber: { type: String },
     email: { type: String, unique: true },
+    phoneNumber: { type: String },
     password: String,
     passwordResetToken: String,
     passwordResetExpires: Date,
